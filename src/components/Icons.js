@@ -1,32 +1,16 @@
 import React from 'react'
-import { FiGithub } from 'react-icons/fi';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { ImStackoverflow } from 'react-icons/im';
 import styled from 'styled-components/macro'
 
 // eslint-disable-next-line max-len
-export const Icons = ({ boxWidth, linkWidth, linkedin, github, stackOverflow, color }) => {
+export const Icons = ({ boxWidth, linkWidth, linkedin, color }) => {
   return (
-    <>
-      <StyledLink color={color} linkWidth={linkWidth} href="https://www.linkedin.com/in/linneaajger" aria-label="link to Linneas linkedin-profile">
-        <OuterBox color={color} boxWidth={boxWidth}>
-          <FaLinkedinIn />
-        </OuterBox>
-        <p>{linkedin}</p>
-      </StyledLink>
-      <StyledLink color={color} linkWidth={linkWidth} href="https://github.com/LinneaAjger" aria-label="link to Linneas github account">
-        <OuterBox color={color} boxWidth={boxWidth}>
-          <FiGithub />
-        </OuterBox>
-        <p color={color}>{github}</p>
-      </StyledLink>
-      <StyledLink color={color} linkWidth={linkWidth} href="https://stackoverflow.com/users/19495108/linnea-a" aria-label="link to Linneas stack Overflow account">
-        <OuterBox color={color} boxWidth={boxWidth}>
-          <ImStackoverflow />
-        </OuterBox>
-        <p color={color}>{stackOverflow}</p>
-      </StyledLink>
-    </>
+    <StyledLink color={color} linkWidth={linkWidth} href="https://www.linkedin.com/in/linneaajger" aria-label="link to Linneas linkedin-profile">
+      <OuterBox color={color} boxWidth={boxWidth}>
+        <FaLinkedinIn />
+      </OuterBox>
+      <p>{linkedin}</p>
+    </StyledLink>
   )
 }
 

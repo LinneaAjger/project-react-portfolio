@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 html {
   font-size: 17px;
@@ -8,9 +7,11 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'IBM plex serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#113840;
+
 }
 
 /* code {
@@ -19,7 +20,7 @@ body {
 } */
 
 h1, h4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'IBM plex serif', sans-serif;
 }
 
 p {
@@ -27,22 +28,6 @@ p {
   line-height: 1.7rem;
 }
 
-.line {
-  border: 1px solid #7260c0;
-  width: 40px;
-  display: inline-block;
-  margin-bottom: 7px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background-color: #7260c0;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 2px;
-}
 
 @media (min-width: 668px) {
   html {

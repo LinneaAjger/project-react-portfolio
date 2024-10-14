@@ -1,11 +1,12 @@
 import styled from 'styled-components/macro'
 
 export const OuterWrapper = styled.div`
-    background-color: ${(props) => (props.selectedColor)};
+    /* background-color: ${(props) => (props.selectedColor)}; */
     background-image:${(props) => (props.backgroundImage)};
 
 `
 export const InnerWrapper = styled.div`
+    background-color: ${(props) => (props.selectedColor)};
     padding: 3rem 0;
     margin: 0 auto;
     width: 80%;
@@ -83,7 +84,4 @@ export const GridDiv = styled.div`
     gap: 2rem;
     align-items: start;    
 
-    @media (min-width: 668px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
  `
