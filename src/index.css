@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 html {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 29px;
 }
 
@@ -10,7 +10,6 @@ body {
   font-family: 'IBM plex serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#113840;
 
 }
 
@@ -21,23 +20,24 @@ body {
 
 h1, h4 {
   font-family: 'IBM plex serif', sans-serif;
+  font-size: 30px;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 15px;
   line-height: 1.7rem;
 }
 
 
 @media (min-width: 668px) {
   html {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 
 @media (min-width: 1025px) {
   html {
-    font-size: 20px;
+    font-size: 15px;
   }
 
 }

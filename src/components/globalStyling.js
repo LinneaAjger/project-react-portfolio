@@ -1,37 +1,34 @@
 import styled from 'styled-components/macro'
 
-export const OuterWrapper = styled.div`
+export const OuterWrapper = styled.main`
     /* background-color: ${(props) => (props.selectedColor)}; */
     background-image:${(props) => (props.backgroundImage)};
+    background-color:#113840;
 
 `
 export const InnerWrapper = styled.div`
-    background-color: ${(props) => (props.selectedColor)};
-    padding: 3rem 0;
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+margin: 0 auto;
+width: 80%;
     @media (min-width:1025px) {
             max-width: 880px;
     }
 `
-export const MainHeaders = styled.h2`
-    font-weight: 700;
+
+export const CardBox = styled.article`
+    padding: 50px 60px 60px 60px;
+    display: flex;
+    gap: 50px;
+    background-color: ${(props) => (props.selectedColor)};
+    color: ${(props) => (props.textColor)};
+
+`
+
+export const CardTitle = styled.h2`
     font-size: 1.3rem;
-    line-height: 1.7rem;
-    text-align: center;
-    color: white;
-    padding: 0.5rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    border-radius: 3px;
-    /* background-color: #285841; */
-    /* background-color: #3b41c5; */
-    background: linear-gradient(0deg, rgb(59 65 197) 0%, rgb(114 96 192) 100%);
-    box-shadow: 1px 1px 20px rgb(0 0 0 / 15%);
+    text-align: right;
+`
+export const CardText = styled.p`
+    font-size: 1rem;
 `
 
 export const TitleTertiary = styled.h3`

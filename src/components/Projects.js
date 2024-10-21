@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
-import { MainHeaders, OuterWrapper, TitleTertiary, TitleQuaternary, SingleTag, GridDiv, InnerWrapper } from './globalStyling'
+import { TitleTertiary, TitleQuaternary, SingleTag, GridDiv } from './globalStyling'
 
 export const Projects = () => {
   const [projectsList, setProjectsList] = useState([])
@@ -23,56 +23,52 @@ export const Projects = () => {
   }, [])
 
   return (
-    <OuterWrapper backgroundImage="linear-gradient(180deg, #ffffff 0%, #fec8ab 100%);">
-      <InnerWrapper>
-        <MainHeaders>featured projects</MainHeaders>
-        <GridDiv>
-          {FeaturedProjects.map((project) => (
-            <ProjectCard key={project.id}>
-              <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
-                <Overlay>
-                  <FeaturedProjectsImg width="100%" src={`https://raw.githubusercontent.com/linneaajger/${project.name}/master/thumbnail.png`} alt="thumbnail of project" />
-                  <OverlayText>
-                    <h4>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h4>
-                  </OverlayText>
-                </Overlay>
+    <>
+      <GridDiv>
+        {FeaturedProjects.map((project) => (
+          <ProjectCard key={project.id}>
+            <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
+              <Overlay>
+                <FeaturedProjectsImg width="100%" src={`https://raw.githubusercontent.com/linneaajger/${project.name}/master/thumbnail.png`} alt="thumbnail of project" />
+                <OverlayText>
+                  <h4>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h4>
+                </OverlayText>
+              </Overlay>
 
-                <ProjectDescription>
-                  <TitleQuaternary>{project.name.replaceAll('-', ' ')}</TitleQuaternary>
-                  <p>{project.description}</p>
-                </ProjectDescription>
-              </StyledDescriptionLink>
-              <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
+              <ProjectDescription>
+                <TitleQuaternary>{project.name.replaceAll('-', ' ')}</TitleQuaternary>
+                <p>{project.description}</p>
+              </ProjectDescription>
+            </StyledDescriptionLink>
+            <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
 
-              <Tags>
-                {// eslint-disable-next-line react/no-array-index-key
-                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
-              </Tags>
-            </ProjectCard>
-          ))}
-        </GridDiv>
+            <Tags>
+              {// eslint-disable-next-line react/no-array-index-key
+              } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
+            </Tags>
+          </ProjectCard>
+        ))}
+      </GridDiv>
+      <div>
+        <TitleTertiary selectedColor="#551A8B" marginTop="10%">other projects</TitleTertiary>
+        {OtherProjects.reverse().map((project) => (
+          <ProjectCard key={project.id}>
+            <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
+              <ProjectDescription>
+                <TitleQuaternary>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</TitleQuaternary>
+                <p>{project.description} <span> &gt;&gt;</span></p>
+              </ProjectDescription>
+            </StyledDescriptionLink>
+            <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
 
-        <div>
-          <TitleTertiary selectedColor="#551A8B" marginTop="10%">other projects</TitleTertiary>
-          {OtherProjects.reverse().map((project) => (
-            <ProjectCard key={project.id}>
-              <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
-                <ProjectDescription>
-                  <TitleQuaternary>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</TitleQuaternary>
-                  <p>{project.description} <span> &gt;&gt;</span></p>
-                </ProjectDescription>
-              </StyledDescriptionLink>
-              <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
-
-              <Tags>
-                {// eslint-disable-next-line react/no-array-index-key
-                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
-              </Tags>
-            </ProjectCard>
-          ))}
-        </div>
-      </InnerWrapper>
-    </OuterWrapper>
+            <Tags>
+              {// eslint-disable-next-line react/no-array-index-key
+              } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
+            </Tags>
+          </ProjectCard>
+        ))}
+      </div>
+    </>
   )
 }
 

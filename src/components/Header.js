@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-import profile4 from './images/profile4.png';
 
 export const Header = () => {
   return (
@@ -18,7 +17,6 @@ export const Header = () => {
             linked in
           </a>
         </Linkbox>
-        <ProfilePicture src={profile4} alt="profile" />
       </HeaderContent>
     </HeaderStyling>
   );
@@ -44,14 +42,7 @@ const Linkbox = styled.div`
   @media (min-width: 668px) {
     width: 100%;
   }
-`;
-
-const ProfilePicture = styled.img`
-
-  @media (min-width: 668px) {
-    max-width: 260px;
-  }
-`;
+`
 
 const HeaderContent = styled.div`
   margin: 0 auto;

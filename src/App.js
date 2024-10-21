@@ -1,25 +1,24 @@
 import React from 'react'
-import { Projects } from 'components/Projects'
 import { Header } from 'components/Header'
 import { AboutMe } from 'components/AboutMe'
 import { Tech } from 'components/Tech'
-import { Thoughts } from 'components/Thoughts'
-import { Skills } from 'components/Skills'
-import { ForMore } from 'components/ForMore'
 import { Footer } from 'components/Footer'
+import { GetInTouch } from 'components/GetInTouch'
+import { InnerWrapper, OuterWrapper } from 'components/globalStyling'
+import { Project } from 'components/SingleProject'
 
 export const App = () => {
   return (
-    <>
-      <Header />
-      <AboutMe />
-      <Tech />
-      <Projects />
-      <Thoughts />
-      <Skills />
-      <ForMore />
-      <Footer />
-    </>
+    <OuterWrapper>
+      <InnerWrapper>
+        <Header />
+        <AboutMe />
+        <Project />
+        <Tech />
+        <GetInTouch />
+        <Footer />
+      </InnerWrapper>
+    </OuterWrapper>
 
   )
 }
