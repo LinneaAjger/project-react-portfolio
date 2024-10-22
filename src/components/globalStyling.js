@@ -9,9 +9,9 @@ export const OuterWrapper = styled.main`
 export const InnerWrapper = styled.div`
 margin: 0 auto;
 width: 80%;
-    @media (min-width:1025px) {
+    /* @media (min-width:1025px) {
             max-width: 880px;
-    }
+    } */
 `
 
 export const CardBox = styled.article`
@@ -20,7 +20,7 @@ export const CardBox = styled.article`
     gap: 50px;
     background-color: ${(props) => (props.selectedColor)};
     color: ${(props) => (props.textColor)};
-
+    width: 50%;
 `
 
 export const CardTitle = styled.h2`
