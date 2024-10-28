@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <HeaderContent>
       <ul>
-        <div>
+        <FirstLinks>
           <li>
             <a>
                 projects
@@ -16,17 +16,17 @@ export const Header = () => {
               about me
             </a>
           </li>
-        </div>
+        </FirstLinks>
         <li>
           <h1>linnea ajger</h1>
         </li>
-        <div>
+        <LastLink>
           <li>
             <a>
               linked in
             </a>
           </li>
-        </div>
+        </LastLink>
       </ul>
     </HeaderContent>
   );
@@ -50,7 +50,7 @@ li {
   margin-right: 15px; /* add spacing between items */
 }
 a {
-  border: 1px solid #DD9FD3;
+  border: 1px solid rgba(221, 159, 211, 0.3);
   border-radius: 40px;
   padding: 20px 30px;
 }
@@ -61,6 +61,20 @@ div {
   flex-direction: row-reverse;
 }
 
+h1 {
+  width: max-content;
+}
+
   @media (min-width: 1025px) {
   }
 `;
+
+const FirstLinks = styled.div`
+  justify-content: flex-end;
+
+`
+
+const LastLink = styled.div`
+  justify-content: flex-start;
+
+`

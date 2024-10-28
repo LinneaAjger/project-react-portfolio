@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react'
-import { CardBox, CardText } from 'components/globalStyling'
+import { CardBox } from 'components/globalStyling'
 import styled from 'styled-components/macro';
 import profile4 from './images/profile4.png';
 
@@ -11,7 +11,10 @@ export const AboutMe = () => {
         <h2>
           Hi! I&apos;m a frontend developer with a background as a physiotherapist.
         </h2>
-        <CardText>I&apos;ve worked over 6 years in a a mulitprofessional team rehabilitating people with disabilites. For me teamwork is key and I want to create products that looks nice, but also works great for everyone!</CardText>
+        <div>
+          <h3>How i got started</h3>
+          <p>I&apos;ve worked over 6 years in a a mulitprofessional team rehabilitating people with disabilites. For me teamwork is key and I want to create products that looks nice, but also works great for everyone!</p>
+        </div>
       </CardBox>
       <ImgBox>
         <ProfilePicture src={profile4} alt="profile" />
