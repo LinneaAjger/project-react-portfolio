@@ -22,11 +22,6 @@ export const CardBox = styled.article`
     color: ${(props) => (props.textColor)};
     width: 50%;
 `
-
-export const CardTitle = styled.h2`
-    font-size: 1.3rem;
-    text-align: right;
-`
 export const CardText = styled.p`
     font-size: 1rem;
 `

@@ -3,54 +3,63 @@ import styled from 'styled-components/macro';
 
 export const Header = () => {
   return (
-    <HeaderStyling>
-      <HeaderContent>
-        <h1>linnea ajger</h1>
-        <Linkbox>
-          <a>
-            projects
-          </a>
-          <a>
-            about me
-          </a>
-          <a>
-            linked in
-          </a>
-        </Linkbox>
-      </HeaderContent>
-    </HeaderStyling>
+    <HeaderContent>
+      <ul>
+        <div>
+          <li>
+            <a>
+                projects
+            </a>
+          </li>
+          <li>
+            <a>
+              about me
+            </a>
+          </li>
+        </div>
+        <li>
+          <h1>linnea ajger</h1>
+        </li>
+        <div>
+          <li>
+            <a>
+              linked in
+            </a>
+          </li>
+        </div>
+      </ul>
+    </HeaderContent>
   );
 };
 
-const HeaderStyling = styled.div`
- h1{
+const HeaderContent = styled.div`
+color:#DD9FD3;
+margin-bottom: 60px;
+
+ ul {
+  list-style: none;
+  padding: 60px 0px;
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-  @media (min-width: 1025px) {
-  }
-`;
+li {
+  display: inline-block;
+  margin-right: 15px; /* add spacing between items */
+}
+a {
+  border: 1px solid #DD9FD3;
+  border-radius: 40px;
+  padding: 20px 30px;
+}
 
-const Linkbox = styled.div`
- 
-
-
-  h1 {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-
-  @media (min-width: 668px) {
-    width: 100%;
-  }
-`
-
-const HeaderContent = styled.div`
-  margin: 0 auto;
-  width: 80%;
-  max-width: 880px;
-  position: relative;
-  color:#DD9FD3;
-
+div {
+  width: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+}
 
   @media (min-width: 1025px) {
   }
