@@ -4,7 +4,7 @@ import { AboutMe } from 'components/AboutMe'
 import { Tech } from 'components/Tech'
 import { Footer } from 'components/Footer'
 import { GetInTouch } from 'components/GetInTouch'
-import { InnerWrapper, OuterWrapper } from 'components/globalStyling'
+import { InnerWrapper, OuterWrapper, GridContainer, GridItemOne, GridItemTwo, GridItemThree, GridItemFour, GridItemFive } from 'components/globalStyling'
 import { Project } from 'components/SingleProject'
 
 export const App = () => {
@@ -12,10 +12,23 @@ export const App = () => {
     <OuterWrapper>
       <InnerWrapper>
         <Header />
-        <AboutMe />
-        <Project />
-        <Tech />
-        <GetInTouch />
+        <GridContainer>
+          <GridItemOne>
+            <AboutMe />
+          </GridItemOne>
+          <GridItemTwo>
+            <p>photo</p>
+          </GridItemTwo>
+          <GridItemThree>
+            <Project />
+          </GridItemThree>
+          <GridItemFour>
+            <Tech />
+          </GridItemFour>
+          <GridItemFive>
+            <GetInTouch />
+          </GridItemFive>
+        </GridContainer>
         <Footer />
       </InnerWrapper>
     </OuterWrapper>

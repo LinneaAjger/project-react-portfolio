@@ -13,6 +13,36 @@ width: 80%;
             max-width: 880px;
     } */
 `
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);;
+  grid-auto-rows: auto;
+    row-gap: 100px;
+`
+
+export const GridItemOne = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 2;
+`
+export const GridItemTwo = styled.div`
+  grid-column: 3 / 5;
+  grid-row: 2;
+  border: 1px solid pink;
+  color: pink;
+`
+export const GridItemThree = styled.div`
+    grid-column: 1 / 5;
+  grid-row: 3;
+  background-color: beige;
+`
+export const GridItemFour = styled.div`
+  grid-column: 3 / 5;
+  grid-row: 4;
+`
+export const GridItemFive = styled.div`
+  grid-column: 1 / 3;
+  grid-row: 5;
+`
 
 export const CardBox = styled.article`
     padding: 50px 60px 60px 60px;
@@ -20,7 +50,6 @@ export const CardBox = styled.article`
     gap: 50px;
     background-color: ${(props) => (props.selectedColor)};
     color: ${(props) => (props.textColor)};
-    width: 50%;
 `
 
 export const TitleTertiary = styled.h3`
