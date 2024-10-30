@@ -9,15 +9,17 @@ export const OuterWrapper = styled.main`
 export const InnerWrapper = styled.div`
 margin: 0 auto;
 width: 80%;
+max-width: 1270px;
     /* @media (min-width:1025px) {
             max-width: 880px;
     } */
 `
+
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);;
   grid-auto-rows: auto;
-    row-gap: 100px;
+  row-gap: 90px;
 `
 
 export const GridItemOne = styled.div`
