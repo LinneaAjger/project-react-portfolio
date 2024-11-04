@@ -54,6 +54,13 @@ export const CardBox = styled.article`
     color: ${(props) => (props.textColor)};
 `
 
+export const CardText = styled.div`
+width: 50%;`
+
+export const Span = styled.span`
+font-style:italic;
+`
+
 export const TitleTertiary = styled.h3`
     font-size: 1.2rem;
     line-height: 1.6rem;

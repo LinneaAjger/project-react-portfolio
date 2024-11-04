@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@font-face {
+  font-family: "Uncut Sans";
+  font-weight: 400;
+  src:
+    local("Uncut Sans"),
+    url("./components/fonts/UncutSans-Regular.woff") format("woff"),
+    url("./components/fonts/UncutSans-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Uncut Sans";
+  font-weight: 400;
+  font-style: italic;
+  src:
+    local("Uncut Sans"),
+    url("./components/fonts/UncutSans-RegularItalic.woff") format("woff"),
+    url("./components/fonts/UncutSans-RegularItalic.woff") format("woff2");
+}
+@font-face {
+  font-family: "Uncut Sans";
+  font-weight: 700;
+  src:
+    local("Uncut Sans"),
+    url("./components/fonts/UncutSans-Bold.woff") format("woff"),
+    url("./components/fonts/UncutSans-Bold.woff2") format("woff2");
+}
+
 html {
   font-size: 15px;
 }
@@ -27,15 +53,18 @@ h1, h2 {
   line-height: 35px;
   letter-spacing: -1px;
 }
+
 h3 {
+  font-family:"Uncut Sans";
   font-size: 15px;
   font-style: italic;
   margin-bottom: 10px;
+  opacity: 0.6;
 }
 
 p {
   line-height: 23px;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 
