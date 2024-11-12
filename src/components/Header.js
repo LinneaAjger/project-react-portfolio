@@ -23,7 +23,7 @@ export const Header = () => {
         <LastLink>
           <li>
             <a>
-              linked in
+              linkedin
             </a>
           </li>
         </LastLink>

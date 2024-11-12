@@ -3,7 +3,6 @@ import styled from 'styled-components/macro'
 export const OuterWrapper = styled.main`
     /* background-color: ${(props) => (props.selectedColor)}; */
     background-image:${(props) => (props.backgroundImage)};
-    background-color:#113840;
 
 `
 export const InnerWrapper = styled.div`
@@ -19,7 +18,7 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);;
   grid-auto-rows: auto;
-  row-gap: 90px;
+  row-gap: 170px;
 `
 
 export const GridItemOne = styled.div`

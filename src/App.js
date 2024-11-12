@@ -29,8 +29,8 @@ export const App = () => {
             <GetInTouch />
           </GridItemFive>
         </GridContainer>
-        <Footer />
       </InnerWrapper>
+      <Footer />
     </OuterWrapper>
 
   )

@@ -28,6 +28,8 @@
 
 html {
   font-size: 15px;
+  background-color:#113840;
+
 }
 
 body {
@@ -53,6 +55,7 @@ h1, h2 {
   line-height: 35px;
   letter-spacing: -1px;
 }
+
 
 h3 {
   font-family:"Uncut Sans";
