@@ -70,6 +70,18 @@ p {
   letter-spacing: -0.5px;
 }
 
+.home-link {
+  border:none !important;
+  font-size: 30px !important;
+  line-height: 35px !important;
+  letter-spacing: -1px !important;
+  font-weight: bold !important;
+}
+
+.home-link:hover {
+   background-color: #113840 !important;
+   color:#DD9FD3 !important;
+}
 
 @media (min-width: 668px) {
   html {

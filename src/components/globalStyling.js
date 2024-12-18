@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import profile4 from './images/profile4.png';
 
 export const OuterWrapper = styled.main`
     /* background-color: ${(props) => (props.selectedColor)}; */
@@ -6,43 +7,52 @@ export const OuterWrapper = styled.main`
 
 `
 export const InnerWrapper = styled.div`
-margin: 0 auto;
-width: 80%;
-max-width: 1270px;
-    /* @media (min-width:1025px) {
-            max-width: 880px;
-    } */
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1270px;
+        /* @media (min-width:1025px) {
+                max-width: 880px;
+        } */
 `
 
 export const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);;
-  grid-auto-rows: auto;
-  row-gap: 170px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    grid-auto-rows: auto;
+    row-gap: 170px;
 `
 
 export const GridItemOne = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 2;
+    grid-column: 1 / 3;
+    grid-row: 2;
 `
 export const GridItemTwo = styled.div`
-  grid-column: 3 / 5;
-  grid-row: 2;
-  border: 1px solid pink;
-  color: pink;
+    grid-column: 3 / 5;
+    grid-row: 2;
+    position: relative;
+
 `
 export const GridItemThree = styled.div`
     grid-column: 1 / 5;
-  grid-row: 3;
-  background-color: beige;
+    grid-row: 3;
+    background-color: beige;
 `
 export const GridItemFour = styled.div`
-  grid-column: 3 / 5;
-  grid-row: 4;
+    grid-column: 3 / 5;
+    grid-row: 4;
 `
 export const GridItemFive = styled.div`
-  grid-column: 1 / 3;
-  grid-row: 5;
+    grid-column: 1 / 3;
+    grid-row: 5;
+`
+
+export const ProfilePic = styled.div`
+    background-image: url(${profile4});
+    height: 100%;
+  
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 `
 
 export const CardBox = styled.article`
@@ -54,10 +64,10 @@ export const CardBox = styled.article`
 `
 
 export const CardText = styled.div`
-width: 50%;`
+    width: 50%;`
 
 export const Span = styled.span`
-font-style:italic;
+    font-style:italic;
 `
 
 export const TitleTertiary = styled.h3`

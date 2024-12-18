@@ -1,30 +1,33 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 import styled from 'styled-components/macro';
 
-export const Header = () => {
+export const Navigation = () => {
   return (
     <HeaderContent>
       <ul>
         <FirstLinks>
           <li>
-            <a>
+            <NavLink to="/projects">
                 projects
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a>
+            <NavLink to="/about">
               about me
-            </a>
+            </NavLink>
           </li>
         </FirstLinks>
         <li>
-          <h1>linnea ajger</h1>
+          <NavLink className="home-link" to="/">
+            linnea ajger
+          </NavLink>
         </li>
         <LastLink>
           <li>
-            <a>
+            <NavLink>
               linkedin
-            </a>
+            </NavLink>
           </li>
         </LastLink>
       </ul>
@@ -50,13 +53,22 @@ li {
   margin-right: 15px; /* add spacing between items */
 }
 a {
-  border: 1px solid rgba(221, 159, 211, 0.3);
+  border: 1px solid #DD9FD3;
   border-radius: 40px;
   padding: 20px 30px;
+  color: #DD9FD3;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+a:hover{
+ color: #113840;
+ background-color: #DD9FD3;
 }
 
 div {
-  width: 50%;
+  width: 33%;
   display: flex;
   flex-direction: row-reverse;
 }
@@ -71,10 +83,8 @@ h1 {
 
 const FirstLinks = styled.div`
   justify-content: flex-end;
-
 `
 
 const LastLink = styled.div`
   justify-content: flex-start;
-
 `

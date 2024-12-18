@@ -1,10 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react'
 import { CardBox, Span } from 'components/globalStyling'
-// import styled from 'styled-components/macro';
-// import profile4 from './images/profile4.png';
 
-export const AboutMe = () => {
+export const About = () => {
   return (
     <CardBox selectedColor="#622658" textColor="#E8ADDF">
       <h2>
@@ -14,9 +12,6 @@ export const AboutMe = () => {
         <h3>How I got started</h3>
         <p>I&apos;ve worked over 6 years in a a mulitprofessional team rehabilitating people with disabilites. For me teamwork is key and I want to create products that looks nice, but also works great for everyone!</p>
       </div>
-      {/* <ImgBox>
-          <ProfilePicture src={profile4} alt="profile" />
-        </ImgBox> */}
     </CardBox>
   )
 }
@@ -26,16 +21,3 @@ export const AboutMe = () => {
 // justify-content: space-between;
 // `
 
-// const ImgBox = styled.div`
-
-//     width: 50%;
-// `
-// const ProfilePicture = styled.img`
-//     position: relative;
-//     bottom: -60px;
-//     object-fit: contain;
-
-// @media (min-width: 668px) {
-//         max-height: 330px;
-//         max-width: 437px;  }
-//  `
