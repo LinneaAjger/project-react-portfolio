@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router';
 import styled from 'styled-components/macro';
+import closingBtn from './images/close_btn.svg'
+import hamburger from './images/hamburger.svg'
 
 export const Navigation = () => {
+  const [click, setClick] = useState(false)
+
+  // function to toggle the sliding navbar
+  const handleClick = () => setClick(!click)
+  console.log(click)
   return (
     <HeaderContent>
       <ul>
-        <FirstLinks>
+        <MenuBtn type="button" onClick={handleClick}>
+          <img className={click ? 'burger-hidden' : 'burger-show'} src={hamburger} alt="open menu" />
+        </MenuBtn>
+        <div className={`menu ${click ? 'menu-show' : 'menu-hidden'}`}>
+          <MenuBtn type="button" onClick={handleClick}>
+            <img src={closingBtn} alt="closing menu" />
+          </MenuBtn>
+          <li>
+            <NavLink to="/projects" onClick={handleClick}>
+                projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" onClick={handleClick}>
+              about me
+            </NavLink>
+          </li>
+        </div>
+        <DesktopNav>
           <li>
             <NavLink to="/projects">
                 projects
@@ -17,12 +42,10 @@ export const Navigation = () => {
               about me
             </NavLink>
           </li>
-        </FirstLinks>
-        <li>
-          <NavLink className="home-link" to="/">
+        </DesktopNav>
+        <NavLink className="home-link" to="/">
             linnea ajger
-          </NavLink>
-        </li>
+        </NavLink>
         <LastLink>
           <li>
             <NavLink>
@@ -35,56 +58,121 @@ export const Navigation = () => {
   );
 };
 
-const HeaderContent = styled.div`
+const HeaderContent = styled.nav`
 color:#DD9FD3;
 margin-bottom: 60px;
 
- ul {
+ul {
   list-style: none;
-  padding: 60px 0px;
+  padding: 20px 0px;
   width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li {
   display: inline-block;
-  margin-right: 15px; /* add spacing between items */
-}
-a {
-  border: 1px solid #DD9FD3;
-  border-radius: 40px;
-  padding: 20px 30px;
-  color: #DD9FD3;
-  text-decoration: none;
-  font-size: 20px;
-  transition: background-color 0.5s ease-in-out;
 }
 
-a:hover{
- color: #113840;
- background-color: #DD9FD3;
+img {
+  height: 20px;
 }
 
-div {
-  width: 33%;
-  display: flex;
-  flex-direction: row-reverse;
-}
 
-h1 {
-  width: max-content;
-}
+@media (min-width: 668px) {
+  margin-bottom: 60px;
 
-  @media (min-width: 1025px) {
+    ul {
+      list-style: none;
+      padding: 60px 0px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    li {
+      margin-right: 15px; /* add spacing between items */
+    }
+    a {
+      text-wrap: nowrap;
+      border: 1px solid #DD9FD3;
+      border-radius: 40px;
+      padding: 20px 30px;
+      color: #DD9FD3;
+      text-decoration: none;
+      font-size: 20px;
+      transition: background-color 0.5s ease-in-out;
+    }
+
+    a:hover{
+      color: #113840;
+      background-color: #DD9FD3;
+    }
+
+    div {
+      width: 33%;
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
-`;
-
-const FirstLinks = styled.div`
-  justify-content: flex-end;
 `
+
+const DesktopNav = styled.div`
+  display: none;
+  
+  @media (min-width: 668px) {
+    display: flex;
+    justify-content: flex-end;
+
+    a {
+      font-size: 15px;
+      border: none;
+      padding: 0px;
+    }
+
+  @media (min-width: 840px) {
+    a {
+    font-size: 20px;
+    border: none;
+    padding: 0px;
+    border: 1px solid #DD9FD3;
+    border-radius: 40px;
+    padding: 20px 30px;
+    }
+  }
+}
+ `
 
 const LastLink = styled.div`
   justify-content: flex-start;
+  a {
+    color: #DD9FD3;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    padding: 0px;
+  }
+
+  @media (min-width: 840px) {
+    a {
+    font-size: 20px;
+    border: none;
+    padding: 0px;
+    border: 1px solid #DD9FD3;
+    border-radius: 40px;
+    padding: 20px 30px;
+  }
+}
 `
+
+const MenuBtn = styled.button`
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+
+ @media (min-width: 668px) {
+  display: none;
+}`

@@ -1,30 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-@font-face {
-  font-family: "Uncut Sans";
-  font-weight: 400;
-  src:
-    local("Uncut Sans"),
-    url("./components/fonts/UncutSans-Regular.woff") format("woff"),
-    url("./components/fonts/UncutSans-Regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Uncut Sans";
-  font-weight: 400;
-  font-style: italic;
-  src:
-    local("Uncut Sans"),
-    url("./components/fonts/UncutSans-RegularItalic.woff") format("woff"),
-    url("./components/fonts/UncutSans-RegularItalic.woff") format("woff2");
-}
-@font-face {
-  font-family: "Uncut Sans";
-  font-weight: 700;
-  src:
-    local("Uncut Sans"),
-    url("./components/fonts/UncutSans-Bold.woff") format("woff"),
-    url("./components/fonts/UncutSans-Bold.woff2") format("woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 
 html {
   font-size: 15px;
@@ -51,31 +28,65 @@ h1 {
 
 h1, h2 {
   font-family: 'IBM plex serif', sans-serif;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 17px;
+  line-height: 22px;
   letter-spacing: -1px;
 }
 
 
 h3 {
-  font-family:"Uncut Sans";
-  font-size: 15px;
+  font-family: "IBM Plex Sans", serif;
+  font-size: 14px;
   font-style: italic;
-  margin-bottom: 10px;
+  margin: 8px 0px;  
   opacity: 0.6;
 }
 
+h4 {
+  font-family: 'IBM plex serif', sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -1px;
+  font-style: italic;
+}
+
+h5 {
+  font-family: "IBM Plex Sans", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -1px;
+
+}
+
+
 p {
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 20px;  
   letter-spacing: -0.5px;
 }
 
 .home-link {
+  
   border:none !important;
-  font-size: 30px !important;
+  font-size: 20px !important;
   line-height: 35px !important;
   letter-spacing: -1px !important;
   font-weight: bold !important;
+  color: #DD9FD3;
+  text-decoration: none;
+  
+
+  @media (min-width: 668px) {
+    font-size: 30px !important;
+  }
+
+  @media (min-width: 1025px) {
+    font-size: 30px !important;
+    line-height: 35px !important;
+    letter-spacing: -1px !important;
+  }
 }
 
 .home-link:hover {
@@ -83,15 +94,72 @@ p {
    color:#DD9FD3 !important;
 }
 
+.burger-hidden {
+ display: none;
+}
+
+.menu {
+  width: 100vw;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; 
+  padding: 27px 10px;
+  background-color:#185757;
+  opacity: 1;
+  transition: translate 1.5s ease-in-out;
+  
+  a {
+    color:#E7D69B;;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  li {
+    padding-top: 10px;
+  }
+}
+
+.menu-show {
+  translate: 0vw;
+}
+
+.menu-hidden {
+      translate: -100vw;
+}
+
+
 @media (min-width: 668px) {
-  html {
-    font-size: 12px;
+
+  h1, h2 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    opacity: 0.6;
+  }
+
+  h4 {
+    font-size: 30px;
+    font-weight: 700;
+    }
+
+  h5 {
+    font-style: italic;
+  }
+    
+  
+  p {
+    font-size: 15px;
+    line-height: 23px;
   }
 }
 
 @media (min-width: 1025px) {
-  html {
-    font-size: 15px;
-  }
+
 
 }

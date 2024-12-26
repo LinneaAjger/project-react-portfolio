@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro'
-import profile4 from './images/profile4.png';
 
 export const OuterWrapper = styled.main`
     /* background-color: ${(props) => (props.selectedColor)}; */
@@ -8,63 +7,101 @@ export const OuterWrapper = styled.main`
 `
 export const InnerWrapper = styled.div`
     margin: 0 auto;
-    width: 80%;
+    width: 95%;
     max-width: 1270px;
-        /* @media (min-width:1025px) {
-                max-width: 880px;
-        } */
+
+    @media (min-width:1025px) {
+        width: 80%;
+    }
 `
 
 export const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);;
-    grid-auto-rows: auto;
-    row-gap: 170px;
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+
+    @media (min-width: 840px) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: auto;
+        row-gap: 170px;
+        }
 `
 
 export const GridItemOne = styled.div`
-    grid-column: 1 / 3;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 3;
+
+    @media (min-width: 840px) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+}
 `
 export const GridItemTwo = styled.div`
-    grid-column: 3 / 5;
+    grid-column: 1;
     grid-row: 2;
-    position: relative;
+
+    @media (min-width: 840px) {
+        grid-column: 3 / 5;
+        grid-row: 2;
+        display: flex;
+        align-items: flex-end;    }
 
 `
 export const GridItemThree = styled.div`
-    grid-column: 1 / 5;
-    grid-row: 3;
-    background-color: beige;
+    grid-column: 1;
+    grid-row: 4;
+    
+    @media (min-width: 840px) {
+        grid-column: 1 / 5;
+        grid-row: 3;
+        background-color: beige;
+    }
 `
 export const GridItemFour = styled.div`
-    grid-column: 3 / 5;
-    grid-row: 4;
+    grid-column: 1;
+    grid-row: 5;
+    
+    @media (min-width: 840px) {
+        grid-column: 3 / 5;
+        grid-row: 4;
+    }
 `
 export const GridItemFive = styled.div`
+    grid-column: 1;
+    grid-row: 6;
+
+    @media (min-width: 840px) {
     grid-column: 1 / 3;
     grid-row: 5;
-`
+    }
+    `
 
-export const ProfilePic = styled.div`
-    background-image: url(${profile4});
-    height: 100%;
-  
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-`
+export const GridDiv = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;    
+    `
 
 export const CardBox = styled.article`
-    padding: 50px 60px 60px 60px;
     display: flex;
-    gap: 50px;
+    flex-direction: column;
     background-color: ${(props) => (props.selectedColor)};
     color: ${(props) => (props.textColor)};
+    padding: 20px 10px;
+    gap: 10px;
+
+@media (min-width: 840px) {
+    flex-direction: row;
+    padding: 50px 60px 60px 60px;
+    gap: 50px;
+        }
 `
 
 export const CardText = styled.div`
-    width: 50%;`
+@media (min-width: 668px) {
+    width: 50%;
+}`
 
 export const Span = styled.span`
     font-style:italic;
@@ -113,11 +150,3 @@ export const SingleTag = styled.p`
     width: fit-content;
     white-space: nowrap;
 `
-
-export const GridDiv = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: start;    
-
- `

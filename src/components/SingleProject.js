@@ -7,8 +7,9 @@ export const Project = () => {
     <ProjectBox>
       <StyledDiv>
         <div>
-          <h4>Project</h4>
-          <h5>tags, tags tags</h5>
+          <h4>Projects.</h4>
+          <h5>MovieTime</h5>
+          <h6>tags, tags tags</h6>
           <p>text about this project</p>
         </div>
         <ImgBox />
@@ -40,14 +41,6 @@ const StyledDiv = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-h4 {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-h5 {
-  font-style: italic;
-}
 
 img {
   border-radius: 10px;
