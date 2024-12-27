@@ -75,6 +75,13 @@ li {
   display: inline-block;
 }
 
+a {
+  text-wrap: nowrap;
+  color: #DD9FD3;
+  text-decoration: none;
+  font-size: 15px;
+}
+
 img {
   height: 20px;
 }
@@ -85,7 +92,7 @@ img {
 
     ul {
       list-style: none;
-      padding: 60px 0px;
+      padding: 20px 0px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -96,13 +103,7 @@ img {
       margin-right: 15px; /* add spacing between items */
     }
     a {
-      text-wrap: nowrap;
-      border: 1px solid #DD9FD3;
-      border-radius: 40px;
-      padding: 20px 30px;
-      color: #DD9FD3;
-      text-decoration: none;
-      font-size: 20px;
+      font-size: 15px;
       transition: background-color 0.5s ease-in-out;
     }
 
@@ -116,7 +117,19 @@ img {
       display: flex;
       flex-direction: row-reverse;
     }
+
+    
   }
+@media (min-width: 840px) {
+
+  ul {
+      list-style: none;
+      padding: 40px 0px;
+  }
+  a {
+  font-size: 20px;
+  }
+}
 `
 
 const DesktopNav = styled.div`
@@ -135,11 +148,6 @@ const DesktopNav = styled.div`
   @media (min-width: 840px) {
     a {
     font-size: 20px;
-    border: none;
-    padding: 0px;
-    border: 1px solid #DD9FD3;
-    border-radius: 40px;
-    padding: 20px 30px;
     }
   }
 }
@@ -147,24 +155,6 @@ const DesktopNav = styled.div`
 
 const LastLink = styled.div`
   justify-content: flex-start;
-  a {
-    color: #DD9FD3;
-    text-decoration: none;
-    font-size: 15px;
-    border: none;
-    padding: 0px;
-  }
-
-  @media (min-width: 840px) {
-    a {
-    font-size: 20px;
-    border: none;
-    padding: 0px;
-    border: 1px solid #DD9FD3;
-    border-radius: 40px;
-    padding: 20px 30px;
-  }
-}
 `
 
 const MenuBtn = styled.button`
@@ -172,6 +162,7 @@ const MenuBtn = styled.button`
   border: none;
   padding: 0;
   display: flex;
+  width: 59px;
 
  @media (min-width: 668px) {
   display: none;

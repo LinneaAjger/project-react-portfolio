@@ -16,27 +16,40 @@ export const Footer = () => {
 
 export const StyledInfo = styled.footer`
   background-color: #0D3138;
-  margin-top: 240px;
-  padding: 240px 0 260px 0;
   justify-content: center;
   font-weight: bold;
   color: #89D8D8;
   display: flex;
   text-align: center;
-    
+  margin-top: 50px;
+  padding: 120px 0 120px 0;
+  
+@media (min-width: 840px) {
+  margin-top: 240px;
+  padding: 240px 0 260px 0;
+}
+@media (min-width: 1024px) {
+  margin-top: 240px;
+  padding: 240px 0 260px 0;
+}
+
     
   div {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 400px;
     margin-top: 30px;
     }
 
   h2 {
-    font-size: 45px;
+    font-size: 30px;
     margin-bottom: 30px;
     text-shadow: rgba(137,216,216,0.3) 0px 0px 90px;
+    @media (min-width: 1024px) {
+      font-size: 45px;;
+}
 
   }
 
@@ -49,8 +62,8 @@ export const StyledInfo = styled.footer`
     border-radius: 6px;
     margin-top: 10px;
     background-color: #0D3138;
-    box-shadow: rgba(137,216,216,0.1) 0px 2px 60px
-
+    box-shadow: rgba(137,216,216,0.1) 0px 2px 60px;
+    width: 50%;
   }
 `
 

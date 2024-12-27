@@ -48,6 +48,8 @@ h4 {
   line-height: 22px;
   letter-spacing: -1px;
   font-style: italic;
+  color: #B4D3D9;
+  text-align: center;
 }
 
 h5 {
@@ -129,6 +131,17 @@ p {
       translate: -100vw;
 }
 
+.line {
+  border: 0.8px solid #38727E;
+  width: 70%;
+  display: inline-block;
+  margin-bottom: 7px;
+
+  @media (min-width: 668px) {
+    display: none;
+  }
+}
+
 
 @media (min-width: 668px) {
 
@@ -144,8 +157,7 @@ p {
   }
 
   h4 {
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 25px;
     }
 
   h5 {

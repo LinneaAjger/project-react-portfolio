@@ -7,7 +7,6 @@ export const Project = () => {
     <ProjectBox>
       <StyledDiv>
         <div>
-          <h4>Projects.</h4>
           <h5>MovieTime</h5>
           <h6>tags, tags tags</h6>
           <p>text about this project</p>
@@ -33,7 +32,7 @@ const ProjectBox = styled.div`
   background-color: #113840;
   color: #B4D3D9;
   min-height: 300px;
-
+  width: 100%;
 `
 
 const StyledDiv = styled.div`

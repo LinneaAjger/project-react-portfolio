@@ -28,7 +28,6 @@ export const GridContainer = styled.div`
 `
 
 export const GridItemOne = styled.div`
-    grid-column: 1;
     grid-row: 3;
 
     @media (min-width: 840px) {
@@ -37,8 +36,11 @@ export const GridItemOne = styled.div`
 }
 `
 export const GridItemTwo = styled.div`
-    grid-column: 1;
     grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -130px;
+    margin-bottom: -50px;
 
     @media (min-width: 840px) {
         grid-column: 3 / 5;
@@ -48,18 +50,18 @@ export const GridItemTwo = styled.div`
 
 `
 export const GridItemThree = styled.div`
-    grid-column: 1;
-    grid-row: 4;
+    grid-row: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
     @media (min-width: 840px) {
         grid-column: 1 / 5;
         grid-row: 3;
-        background-color: beige;
     }
 `
 export const GridItemFour = styled.div`
-    grid-column: 1;
-    grid-row: 5;
+    grid-row: 7;
     
     @media (min-width: 840px) {
         grid-column: 3 / 5;
@@ -67,8 +69,7 @@ export const GridItemFour = styled.div`
     }
 `
 export const GridItemFive = styled.div`
-    grid-column: 1;
-    grid-row: 6;
+    grid-row: 9;
 
     @media (min-width: 840px) {
     grid-column: 1 / 3;
@@ -82,20 +83,53 @@ export const GridDiv = styled.div`
     gap: 2rem;
     align-items: start;    
     `
+export const GridTitleOne = styled.h4`
+    grid-row: 4;
+    margin-top: 20px;
+    margin-bottom: -20px;
+
+    @media (min-width: 840px) {
+        display: none;
+    }
+`
+export const GridTitleTwo = styled.h4`
+    grid-row: 6;
+    margin-top: 20px;
+    margin-bottom: -20px;
+
+    @media (min-width: 840px) {
+        display: none;
+    } 
+`
+export const GridTitleThree = styled.h4`
+    grid-row: 8;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    @media (min-width: 840px) {
+        display: none;
+    }
+`
 
 export const CardBox = styled.article`
     display: flex;
     flex-direction: column;
     background-color: ${(props) => (props.selectedColor)};
     color: ${(props) => (props.textColor)};
-    padding: 20px 10px;
+    padding: 50px 40px;
     gap: 10px;
+    max-width: 470px;
 
-@media (min-width: 840px) {
-    flex-direction: row;
-    padding: 50px 60px 60px 60px;
-    gap: 50px;
+    @media (min-width: 840px) {
+        flex-direction: row;
+        padding: 40px 20px 40px 20px;
+        gap: 30px;
         }
+    @media (min-width: 1024px) {
+        padding: 50px 60px 60px 60px;
+        gap: 50px;
+        max-width: 590px;
+
+    }
 `
 
 export const CardText = styled.div`

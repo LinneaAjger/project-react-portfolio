@@ -17,7 +17,7 @@ const ImgBox = styled.img`
 
     @media (min-width: 840px) {
       max-width: none;
-
+      z-index: -1;
     }
     `
 // const ProfilePicture = styled.img`
