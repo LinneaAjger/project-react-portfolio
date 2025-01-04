@@ -6,7 +6,7 @@ export const About = () => {
   return (
     <CardBox selectedColor="#622658" textColor="#E8ADDF">
       <h2>
-        <Span>Hi! I&apos;m a frontend developer</Span> with a background as a physiotherapist.
+        <Span>want-to-be</Span> professional web developer with accessibility ambitions and a heart for UI.
       </h2>
       <div>
         <h3>How I got started</h3>

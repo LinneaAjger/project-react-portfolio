@@ -79,7 +79,6 @@ a {
   text-wrap: nowrap;
   color: #DD9FD3;
   text-decoration: none;
-  font-size: 15px;
 }
 
 img {
@@ -87,8 +86,8 @@ img {
 }
 
 
-@media (min-width: 668px) {
-  margin-bottom: 60px;
+  @media (min-width: 668px) {
+    margin-bottom: 60px;
 
     ul {
       list-style: none;
@@ -105,6 +104,8 @@ img {
     a {
       font-size: 15px;
       transition: background-color 0.5s ease-in-out;
+      padding: 10px 15px;
+      border-radius: 20px;
     }
 
     a:hover{
@@ -120,36 +121,27 @@ img {
 
     
   }
-@media (min-width: 840px) {
+  @media (min-width: 840px) {
 
-  ul {
-      list-style: none;
-      padding: 40px 0px;
+    ul {
+        list-style: none;
+        padding: 40px 0px;
+    }
+
+    a {
+      font-size: 20px;
+      padding: 15px;
+      border-radius: 40px;
+    }
   }
-  a {
-  font-size: 20px;
-  }
-}
 `
 
 const DesktopNav = styled.div`
-  display: none;
+display: none;
   
   @media (min-width: 668px) {
     display: flex;
     justify-content: flex-end;
-
-    a {
-      font-size: 15px;
-      border: none;
-      padding: 0px;
-    }
-
-  @media (min-width: 840px) {
-    a {
-    font-size: 20px;
-    }
-  }
 }
  `
 
@@ -158,11 +150,11 @@ const LastLink = styled.div`
 `
 
 const MenuBtn = styled.button`
-  background: none;
-  border: none;
-  padding: 0;
-  display: flex;
-  width: 59px;
+background: none;
+border: none;
+padding: 0;
+display: flex;
+width: 59px;
 
  @media (min-width: 668px) {
   display: none;

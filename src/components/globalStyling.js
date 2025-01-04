@@ -19,6 +19,7 @@ export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 50px;
+    justify-items: center;
 
     @media (min-width: 840px) {
         grid-template-columns: repeat(4, 1fr);
@@ -66,6 +67,8 @@ export const GridItemFour = styled.div`
     @media (min-width: 840px) {
         grid-column: 3 / 5;
         grid-row: 4;
+        display: flex;
+        justify-content: flex-end;
     }
 `
 export const GridItemFive = styled.div`
@@ -123,19 +126,26 @@ export const CardBox = styled.article`
         flex-direction: row;
         padding: 40px 20px 40px 20px;
         gap: 30px;
+        min-width: 420px;
         }
     @media (min-width: 1024px) {
         padding: 50px 60px 60px 60px;
         gap: 50px;
-        max-width: 590px;
-
+        min-width: 610px;
+        
+        h2 {
+            min-width: 250px;
+        }
     }
 `
 
 export const CardText = styled.div`
-@media (min-width: 668px) {
-    width: 50%;
-}`
+min-width: 200px;
+
+p {
+    margin-top: 10px;
+}
+`
 
 export const Span = styled.span`
     font-style:italic;

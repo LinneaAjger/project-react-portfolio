@@ -10,10 +10,9 @@ export const GetInTouch = () => {
       </CardText>
       <CardText>
         <h3>My contribution</h3>
-        <p>
-        Sed finibus ex nunc, eget porttitor lacus porttitor sollicitudin. Integer at lectus nec nulla sodales efficitur. Maecenas consequat orci ut varius pharetra. Aliquam eget iaculis sem, ut efficitur ligula. Vestibulum ullamcorper turpis id ligula consectetur condimentum. Donec in ante erat. Nullam eros ipsum, interdum et nisl a, iaculis lobortis lorem. Cras vel elit ut sem vehicula ultrices non non nunc. Nullam est enim, maximus non viverra ut, egestas et arcu.
-
-        </p>
+        <p>I&apos;ve learned that it can be really challenging to translate designs pixel-perfect, and that just following Figma spacings and sizes for some reason doesn&apos;t translate to that 1:1 implementation.</p>
+        <p>I&apos;ll be an eager learner open to learn how you work, and make sure to keep up with the latest of CSS possibilities.</p>
+        <p>I&apos;ll put a lot of effort into making sure we&apos;re doing accessible implementations now that the EU accessibility act is in action.</p>
       </CardText>
     </CardBox>
   )

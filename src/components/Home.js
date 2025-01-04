@@ -18,7 +18,6 @@ const Home = () => {
       <GridTitleOne>Projects.</GridTitleOne>
       <GridItemThree>
         <Project />
-        <span className="line" />
       </GridItemThree>
       <GridTitleTwo>A bit about me.</GridTitleTwo>
       <GridItemFour>
