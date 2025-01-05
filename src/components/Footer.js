@@ -6,7 +6,7 @@ export const Footer = () => {
     <StyledInfo>
       <div>
         <h2>linnéa ajger</h2>
-        <a href="tel:004673-0860444" aria-label="phone number">get in touch</a>
+        <a href="mailto:linnea.ajger@gmail.com" aria-label="send email to Linnéa">get in touch</a>
         <a href="https://www.linkedin.com/in/linneaajger" aria-label="Link to Linnéas linked-in page">linkedin</a>
       </div>
     </StyledInfo>

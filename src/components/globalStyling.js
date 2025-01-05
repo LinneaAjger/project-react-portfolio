@@ -80,12 +80,6 @@ export const GridItemFive = styled.div`
     }
     `
 
-export const GridDiv = styled.div`
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: start;    
-    `
 export const GridTitleOne = styled.h4`
     grid-row: 4;
     margin-top: 20px;

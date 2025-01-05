@@ -3,15 +3,15 @@ import React from 'react'
 import styled from 'styled-components'
 import projectImg from './images/projectImg.png'
 
-export const Project = () => {
+export const SingleProject = () => {
   return (
     <LayoutBox>
       <span className="line" />
-      <TextBox>
+      <ProjectText>
         <h5>MovieTime</h5>
         <h6>Hobby project • Next.js, HTML/CSS/JS</h6>
         <p>MovieZine challenged me with using asynchronous fetching and parsing a JSON response from an API, effectively cherry-picking the data points I wanted from it, and composing it in a reusable movie poster component.</p>
-      </TextBox>
+      </ProjectText>
       <ImageBox />
     </LayoutBox>
   )
@@ -38,7 +38,7 @@ img {
   }
 `
 
-const TextBox = styled.div`
+const ProjectText = styled.div`
   width: 100%;
 
   p {

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
-import { TitleTertiary, TitleQuaternary, SingleTag, GridDiv } from './globalStyling'
 
 export const Projects = () => {
   const [projectsList, setProjectsList] = useState([])
@@ -27,84 +26,86 @@ export const Projects = () => {
       <GridDiv>
         {FeaturedProjects.map((project) => (
           <ProjectCard key={project.id}>
-            <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
+            <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
               <Overlay>
                 <FeaturedProjectsImg width="100%" src={`https://raw.githubusercontent.com/linneaajger/${project.name}/master/thumbnail.png`} alt="thumbnail of project" />
                 <OverlayText>
-                  <h4>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h4>
+                  <h5>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h5>
                 </OverlayText>
               </Overlay>
-
-              <ProjectDescription>
-                <TitleQuaternary>{project.name.replaceAll('-', ' ')}</TitleQuaternary>
-                <p>{project.description}</p>
-              </ProjectDescription>
-            </StyledDescriptionLink>
-            <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
-
-            <Tags>
-              {// eslint-disable-next-line react/no-array-index-key
-              } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
-            </Tags>
+            </a>
+            <ProjectDescription>
+              <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
+                <h5>{project.name.replaceAll('-', ' ')}</h5>
+              </a>
+              <Tags>
+                {// eslint-disable-next-line react/no-array-index-key
+                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag} </SingleTag>)}
+              </Tags>
+              <p>{project.description}</p>
+            </ProjectDescription>
+            <GithubLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</GithubLink>
           </ProjectCard>
         ))}
       </GridDiv>
-      <div>
-        <TitleTertiary selectedColor="#551A8B" marginTop="10%">other projects</TitleTertiary>
+      <OtherProjectsDiv>
+        <h3>other projects</h3>
         {OtherProjects.reverse().map((project) => (
           <ProjectCard key={project.id}>
-            <StyledDescriptionLink target="_blank" rel="noopener noreferrer" href={project.homepage}>
-              <ProjectDescription>
-                <TitleQuaternary>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</TitleQuaternary>
-                <p>{project.description} <span> &gt;&gt;</span></p>
-              </ProjectDescription>
-            </StyledDescriptionLink>
-            <StyledLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</StyledLink>
-
-            <Tags>
-              {// eslint-disable-next-line react/no-array-index-key
-              } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
-            </Tags>
+            <ProjectDescription>
+              <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
+                <h5>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h5>
+              </a>
+              <Tags>
+                {// eslint-disable-next-line react/no-array-index-key
+                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
+              </Tags>
+              <p>{project.description}</p>
+            </ProjectDescription>
+            <a target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</a>
           </ProjectCard>
         ))}
-      </div>
+      </OtherProjectsDiv>
     </>
   )
 }
 
-const ProjectCard = styled.div`
-margin-bottom: 2rem;
-`
+const GridDiv = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+    font-family: "IBM Plex Sans", sans-serif;
 
-export const StyledDescriptionLink = styled.a`
-  text-decoration: none;
-  color: black;
-`
-
-const StyledLink = styled.a`
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color:#551A8B;
-  /* color:#285841; */
-
-  &:hover {
+    a {
+      text-decoration: none;
+      color: #b4d3d9;
+    }
+    a:hover {
         text-decoration: underline;
     }
+
+    p {
+      margin: 0px 0px 20px 0px;
+      color: #b4d3d9;
+    }
+
+    @media (min-width: 840px) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+    `
+
+const ProjectCard = styled.div`
+display: flex;
+flex-direction: column;
+color: #b4d3d9;
 `
 
 const ProjectDescription = styled.div`
-margin: 1rem 0rem 0.5rem 0rem;
-
 a{
   text-decoration: none;
 }
 
-span {
-  color:#7260c0;
-  font-weight: 700;
-}
 
 &:hover {
         text-decoration: underline;
@@ -112,11 +113,7 @@ span {
     }
 
 `
-const Tags = styled.div`
-    display: flex;
-    margin: 0.5rem 0rem 0rem 0rem;
-    flex-wrap: wrap;
-`
+
 export const FeaturedProjectsImg = styled.img`
     width: ${(props) => (props.width)};
     border-radius: 10px;
@@ -130,23 +127,54 @@ const Overlay = styled.div`
     }
 `
 const OverlayText = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 3px;
-    background-color: #484848a1;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
+position: absolute;
+width: 100%;
+height: 100%;
+bottom: 0px;
+background-color: #38727eeb;
+display: flex;
+align-items: center;
+justify-content: space-around;
+border-radius: 10px;
+transition: 0.3s ease-in-out;
 
-  h4 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    color: white;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-  }
+h4 {
+text-transform: uppercase;
+}
+`
+const Tags = styled.div`
+display: flex;
+flex-direction: row;
+
+
+    p {
+      margin: 0px 5px 0px 0px;
+    }
 `
 
+const SingleTag = styled.h6`
+  padding: 0px 5px 0px 0px;
+  width: fit-content;
+  white-space: nowrap;
+  background-color: #146767;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-right: 15px;
+`
+
+const GithubLink = styled.a`
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+`
+
+const OtherProjectsDiv = styled(GridDiv)`
+grid-template-columns: 1fr;
+color: #b4d3d9;
+
+a {
+  color: #b4d3d9;
+  text-decoration: none;
+
+}
+`

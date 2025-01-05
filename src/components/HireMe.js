@@ -2,7 +2,7 @@
 import React from 'react'
 import { CardBox, CardText, Span } from './globalStyling'
 
-export const GetInTouch = () => {
+export const HireMe = () => {
   return (
     <CardBox selectedColor="#185757" textColor="#89D8D8">
       <CardText>

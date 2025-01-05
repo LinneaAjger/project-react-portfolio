@@ -48,7 +48,7 @@ export const Navigation = () => {
         </NavLink>
         <LastLink>
           <li>
-            <NavLink>
+            <NavLink to="https://www.linkedin.com/in/linneaajger" aria-label="link to Linneas linkedin-profile">
               linkedin
             </NavLink>
           </li>
