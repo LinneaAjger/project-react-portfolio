@@ -65,7 +65,7 @@ a {
 
 @media (min-width: 1024px) {
   margin-top: 240px;
-  padding: 240px 0 260px 0;
+  padding: 130px 0 130px 0;
 
   h2 {
       font-size: 45px;;

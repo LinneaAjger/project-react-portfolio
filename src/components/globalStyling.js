@@ -12,7 +12,7 @@ export const InnerWrapper = styled.div`
 
     @media (min-width:1025px) {
         width: 80%;
-        max-width: 1220px;
+        max-width: 1100px;
     }
 `
 
@@ -35,6 +35,7 @@ export const GridItemOne = styled.div`
     @media (min-width: 840px) {
         grid-column: 1 / 3;
         grid-row: 2;
+        margin-top: -110px;
 }
 `
 export const GridItemTwo = styled.div`
