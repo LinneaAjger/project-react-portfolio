@@ -12,7 +12,7 @@ export const InnerWrapper = styled.div`
 
     @media (min-width:1025px) {
         width: 80%;
-        max-width: 1100px;
+        max-width: 1300px;
     }
 `
 
@@ -36,6 +36,7 @@ export const GridItemOne = styled.div`
         grid-column: 1 / 3;
         grid-row: 2;
         margin-top: -110px;
+        width: 100%;
 }
 `
 export const GridItemTwo = styled.div`
@@ -117,6 +118,7 @@ export const CardBox = styled.article`
     padding: 50px 40px;
     gap: 10px;
     max-width: 470px;
+    width: 100%;
 
     @media (min-width: 840px) {
         flex-direction: row;
@@ -125,9 +127,9 @@ export const CardBox = styled.article`
         min-width: 420px;
         }
     @media (min-width: 1024px) {
-        padding: 50px 60px 60px 60px;
-        gap: 50px;
-        min-width: 610px;
+        padding: 40px 30px;
+        min-width: 500px;
+        max-width: 600px;
         
         h2 {
             min-width: 250px;
