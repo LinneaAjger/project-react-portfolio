@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react'
-import { CardBox, Span } from 'components/globalStyling'
+import { CardBox, CardText, Span } from 'components/globalStyling'
 
 export const AboutMe = () => {
   return (
@@ -8,10 +8,12 @@ export const AboutMe = () => {
       <h2>
         <Span>want-to-be</Span> professional web developer with accessibility ambitions and a heart for UI.
       </h2>
-      <div>
+      <CardText>
         <h3>How I got started</h3>
-        <p>I&apos;ve worked over 6 years in a a mulitprofessional team rehabilitating people with disabilites. For me teamwork is key and I want to create products that looks nice, but also works great for everyone!</p>
-      </div>
+        <p>In 2021 I attended the Technigo&apos;s Front-end Bootcamp for 6 months together with 70 other ambitious like-minded.</p>
+        <p>I learned how to set up a web site using HTML, CSS and Javascript. Using React & Next.js I fetched data and translated it into a meaningful design. I wrote and read from a database.</p>
+        <p>In this portfolio you&apos;ll find some of my projects.</p>
+      </CardText>
     </CardBox>
   )
 }

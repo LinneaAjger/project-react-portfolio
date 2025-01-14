@@ -6,7 +6,8 @@ export const HireMe = () => {
   return (
     <CardBox selectedColor="#185757" textColor="#89D8D8">
       <CardText>
-        <h2><Span>who are you?</Span> perhaps you’re looking for an intern for a few months, or a junior hire to off load the basics from more senior staff. </h2>
+        <h2><Span>who are you?</Span></h2>
+        <h2>perhaps you’re looking for an intern for a few months, or a junior hire to off load the basics from more senior staff. </h2>
       </CardText>
       <CardText>
         <h3>My contribution</h3>
