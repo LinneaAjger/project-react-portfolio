@@ -148,3 +148,24 @@ p {
 export const Span = styled.span`
     font-style:italic;
 `
+
+export const ProjectText = styled.div`
+    color: #DEEEF2;
+    width: 100%;
+
+  p {
+    color: #DEEEF2;
+    opacity: 0.75;
+    font-family: "IBM Plex Sans", sans-serif;
+    margin-top: 15px;
+
+  }
+
+  h5 {
+    color: #DEEEF2;
+    margin-top: 15px;
+  }
+
+  @media (min-width: 840px) {
+  }
+`

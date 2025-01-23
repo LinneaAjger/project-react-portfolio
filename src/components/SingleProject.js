@@ -2,6 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import projectImg from './images/projectImg.png'
+import { ProjectText } from './globalStyling'
 
 export const SingleProject = () => {
   return (
@@ -35,18 +36,6 @@ img {
     flex-direction: row;
     align-items: flex-start;
     min-height: 450px;
-  }
-`
-
-const ProjectText = styled.div`
-  width: 100%;
-
-  p {
-    font-family: "IBM Plex Sans", sans-serif;
-  }
-
-  @media (min-width: 840px) {
-    width: 30%;
   }
 `
 

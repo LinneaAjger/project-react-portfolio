@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components/macro'
+import { ProjectText } from './globalStyling'
 
 export const Projects = () => {
   const [projectsList, setProjectsList] = useState([])
@@ -23,18 +24,16 @@ export const Projects = () => {
 
   return (
     <>
+      <ProjectHeading>Projects.</ProjectHeading>
       <GridDiv>
         {FeaturedProjects.map((project) => (
           <ProjectCard key={project.id}>
             <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
               <Overlay>
                 <FeaturedProjectsImg width="100%" src={`https://raw.githubusercontent.com/linneaajger/${project.name}/master/thumbnail.png`} alt="thumbnail of project" />
-                <OverlayText>
-                  <h5>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h5>
-                </OverlayText>
               </Overlay>
             </a>
-            <ProjectDescription>
+            <ProjectText>
               <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
                 <h5>{project.name.replaceAll('-', ' ')}</h5>
               </a>
@@ -43,16 +42,15 @@ export const Projects = () => {
                 } {project.topics.map((tag, index) => <SingleTag key={index}>{tag} </SingleTag>)}
               </Tags>
               <p>{project.description}</p>
-            </ProjectDescription>
-            <GithubLink target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</GithubLink>
+            </ProjectText>
           </ProjectCard>
         ))}
       </GridDiv>
       <OtherProjectsDiv>
-        <h3>other projects</h3>
+        <ProjectHeading>other projects.</ProjectHeading>
         {OtherProjects.reverse().map((project) => (
           <ProjectCard key={project.id}>
-            <ProjectDescription>
+            <ProjectText>
               <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
                 <h5>{project.name.replaceAll('-', ' ').replaceAll('project', '')}</h5>
               </a>
@@ -61,8 +59,7 @@ export const Projects = () => {
                 } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
               </Tags>
               <p>{project.description}</p>
-            </ProjectDescription>
-            <a target="_blank" rel="noopener noreferrer" href={project.html_url}>👉 Github</a>
+            </ProjectText>
           </ProjectCard>
         ))}
       </OtherProjectsDiv>
@@ -73,7 +70,7 @@ export const Projects = () => {
 const GridDiv = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 70px;    
     align-items: start;
     font-family: "IBM Plex Sans", sans-serif;
 
@@ -83,11 +80,6 @@ const GridDiv = styled.div`
     }
     a:hover {
         text-decoration: underline;
-    }
-
-    p {
-      margin: 0px 0px 20px 0px;
-      color: #b4d3d9;
     }
 
     @media (min-width: 840px) {
@@ -101,18 +93,21 @@ flex-direction: column;
 color: #b4d3d9;
 `
 
-const ProjectDescription = styled.div`
-a{
-  text-decoration: none;
-}
+// const ProjectDescription = styled.div`
+// a{
+//   text-decoration: none;
+// }
 
+// h5 {
+//   margin-top: 15px;
+// }
 
-&:hover {
-        text-decoration: underline;
-        text-decoration-color: #551A8B;
-    }
+// &:hover {
+//         text-decoration: underline;
+//         text-decoration-color: #551A8B;
+//     }
 
-`
+// `
 
 export const FeaturedProjectsImg = styled.img`
     width: ${(props) => (props.width)};
@@ -120,28 +115,13 @@ export const FeaturedProjectsImg = styled.img`
   `
 
 const Overlay = styled.div`
-  position: relative;
+  /* position: relative;
 
   & :hover {
       opacity: 0;
-    }
+    } */
 `
-const OverlayText = styled.div`
-position: absolute;
-width: 100%;
-height: 100%;
-bottom: 0px;
-background-color: #38727eeb;
-display: flex;
-align-items: center;
-justify-content: space-around;
-border-radius: 10px;
-transition: 0.3s ease-in-out;
 
-h4 {
-text-transform: uppercase;
-}
-`
 const Tags = styled.div`
 display: flex;
 flex-direction: row;
@@ -153,19 +133,13 @@ flex-direction: row;
 `
 
 const SingleTag = styled.h6`
-  padding: 0px 5px 0px 0px;
+  /* padding: 0px 5px 0px 0px;
   width: fit-content;
   white-space: nowrap;
   background-color: #146767;
   padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: 5px; */
   margin-right: 15px;
-`
-
-const GithubLink = styled.a`
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
 `
 
 const OtherProjectsDiv = styled(GridDiv)`
@@ -177,4 +151,9 @@ a {
   text-decoration: none;
 
 }
+`
+
+const ProjectHeading = styled.h4`
+text-align: left;
+margin: 60px 0px;
 `
