@@ -110,7 +110,7 @@ p {
   padding: 27px 10px;
   background-color:#185757;
   opacity: 1;
-  transition: translate 1.5s ease-in-out;
+  transition: translate 0.5s ease-in-out;
   
   a {
     color:#E7D69B;;
@@ -162,13 +162,14 @@ p {
 
   h5 {
     font-style: normal;
-    font-size: 30px;
+    font-size: 25px;
   }
 
   h6{
     font-size: 15px;
     font-weight: 400;
     font-style: italic;
+    margin-top: 10px;
   }
     
   
@@ -180,5 +181,8 @@ p {
 
 @media (min-width: 1025px) {
 
+  h5 {
+    font-size: 30px;
+  }
 
 }

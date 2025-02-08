@@ -164,6 +164,7 @@ export const ProjectText = styled.div`
   h5 {
     color: #DEEEF2;
     margin-top: 15px;
+    text-transform: capitalize;
   }
 
   @media (min-width: 840px) {

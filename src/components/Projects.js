@@ -24,14 +24,14 @@ export const Projects = () => {
 
   return (
     <>
-      <ProjectHeading>Projects.</ProjectHeading>
+      <ProjectHeading>projects.</ProjectHeading>
       <GridDiv>
         {FeaturedProjects.map((project) => (
           <ProjectCard key={project.id}>
             <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
-              <Overlay>
+              <div>
                 <FeaturedProjectsImg width="100%" src={`https://raw.githubusercontent.com/linneaajger/${project.name}/master/thumbnail.png`} alt="thumbnail of project" />
-              </Overlay>
+              </div>
             </a>
             <ProjectText>
               <a target="_blank" rel="noopener noreferrer" href={project.homepage}>
@@ -39,7 +39,7 @@ export const Projects = () => {
               </a>
               <Tags>
                 {// eslint-disable-next-line react/no-array-index-key
-                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag} </SingleTag>)}
+                } {project.topics.map((tag, index) => <SingleTag key={index}>#{tag} </SingleTag>)}
               </Tags>
               <p>{project.description}</p>
             </ProjectText>
@@ -56,7 +56,7 @@ export const Projects = () => {
               </a>
               <Tags>
                 {// eslint-disable-next-line react/no-array-index-key
-                } {project.topics.map((tag, index) => <SingleTag key={index}>{tag}</SingleTag>)}
+                } {project.topics.map((tag, index) => <SingleTag key={index}>#{tag}</SingleTag>)}
               </Tags>
               <p>{project.description}</p>
             </ProjectText>
@@ -93,39 +93,15 @@ flex-direction: column;
 color: #b4d3d9;
 `
 
-// const ProjectDescription = styled.div`
-// a{
-//   text-decoration: none;
-// }
-
-// h5 {
-//   margin-top: 15px;
-// }
-
-// &:hover {
-//         text-decoration: underline;
-//         text-decoration-color: #551A8B;
-//     }
-
-// `
-
 export const FeaturedProjectsImg = styled.img`
     width: ${(props) => (props.width)};
     border-radius: 10px;
   `
 
-const Overlay = styled.div`
-  /* position: relative;
-
-  & :hover {
-      opacity: 0;
-    } */
-`
-
 const Tags = styled.div`
 display: flex;
 flex-direction: row;
-
+flex-wrap: wrap;
 
     p {
       margin: 0px 5px 0px 0px;
@@ -133,18 +109,12 @@ flex-direction: row;
 `
 
 const SingleTag = styled.h6`
-  /* padding: 0px 5px 0px 0px;
-  width: fit-content;
-  white-space: nowrap;
-  background-color: #146767;
-  padding: 5px 15px;
-  border-radius: 5px; */
   margin-right: 15px;
 `
 
 const OtherProjectsDiv = styled(GridDiv)`
 grid-template-columns: 1fr;
-color: #b4d3d9;
+gap: 20px;
 
 a {
   color: #b4d3d9;
@@ -155,5 +125,10 @@ a {
 
 const ProjectHeading = styled.h4`
 text-align: left;
-margin: 60px 0px;
+margin: 80px 0px 60px 0px;
+font-size: 20px;
+
+@media (min-width: 840px) {
+  font-size: 30px;
+}
 `
