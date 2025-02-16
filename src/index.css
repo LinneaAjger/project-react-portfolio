@@ -107,7 +107,7 @@ p {
   z-index: 1;
   display: flex;
   flex-direction: column; 
-  padding: 27px 10px;
+  padding: 28px 14px;
   background-color:#185757;
   opacity: 1;
   transition: translate 0.5s ease-in-out;
@@ -119,8 +119,28 @@ p {
   }
   
   li {
-    padding-top: 10px;
+    display: flex;
+    padding: 15px 0;
+    line-height: 20px;
+    margin: 0;
+    background: rgb(167 136 172 / 20%);
+    border-radius: 10px;
+    text-align: center;
+    color: #ffbbf3;
   }
+
+  li a {
+    color: #ffbbf3;
+  }
+
+  li + li {
+    margin-top: 5px;
+  }
+
+  li:first-of-type {
+    margin-top: 28px;
+  }
+  
 }
 
 .menu-show {

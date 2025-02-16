@@ -124,11 +124,11 @@ export const CardBox = styled.article`
         flex-direction: row;
         padding: 40px 20px 40px 20px;
         gap: 30px;
-        min-width: 420px;
+        min-width: 430px;
         }
     @media (min-width: 1024px) {
         padding: 40px 30px;
-        min-width: 500px;
+        min-width: 540px;
         max-width: 600px;
         
         h2 {

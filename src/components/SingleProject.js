@@ -11,7 +11,7 @@ export const SingleProject = () => {
       <ProjectText>
         <h5>MovieTime</h5>
         <h6>Hobby project • Next.js, HTML/CSS/JS</h6>
-        <p>MovieZine challenged me with using asynchronous fetching and parsing a JSON response from an API, effectively cherry-picking the data points I wanted from it, and composing it in a reusable movie poster component.</p>
+        <p>MovieTime challenged me with using asynchronous fetching and parsing a JSON response from an API, effectively cherry-picking the data points I wanted from it, and composing it in a reusable movie poster component.</p>
       </ProjectText>
       <ImageBox />
     </LayoutBox>
@@ -35,7 +35,7 @@ img {
   @media (min-width: 840px) {
     flex-direction: row;
     align-items: flex-start;
-    min-height: 450px;
+    /* min-height: 450px; */
   }
 `
 
