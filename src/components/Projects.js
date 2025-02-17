@@ -18,6 +18,8 @@ export const Projects = () => {
   const FeaturedProjects = secondaryFiltering.filter((project) => project.stargazers_count === 1)
   const OtherProjects = secondaryFiltering.filter((project) => project.stargazers_count === 0)
 
+  console.log(FeaturedProjects)
+
   useEffect(() => {
     FetchProjects()
   }, [])

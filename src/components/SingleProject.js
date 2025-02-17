@@ -2,14 +2,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import projectImg from './images/projectImg.png'
-import { ProjectText } from './globalStyling'
+import { ProjectText, StyledLink } from './globalStyling'
 
 export const SingleProject = () => {
   return (
     <LayoutBox>
       <span className="line" />
       <ProjectText>
-        <h5>MovieTime</h5>
+        <h5>
+          <StyledLink target="_blank" rel="noopener noreferrer" href="https://next-movie-time.vercel.app/">MovieTime</StyledLink>
+        </h5>
         <h6>Hobby project • Next.js, HTML/CSS/JS</h6>
         <p>MovieTime challenged me with using asynchronous fetching and parsing a JSON response from an API, effectively cherry-picking the data points I wanted from it, and composing it in a reusable movie poster component.</p>
       </ProjectText>

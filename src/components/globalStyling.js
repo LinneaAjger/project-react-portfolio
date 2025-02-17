@@ -170,3 +170,14 @@ export const ProjectText = styled.div`
   @media (min-width: 840px) {
   }
 `
+
+export const StyledLink = styled.a`
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline    
+}
+
+`
